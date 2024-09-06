@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+// import axios from 'axios';
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({
-    username: '',
+    email: '',
     password: ''
   });
 
@@ -17,7 +18,10 @@ const LoginForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission logic here
+    //api request to login with axios
+    // axios.post('api', formData)
     console.log(formData);
+    
   };
 
   return (
