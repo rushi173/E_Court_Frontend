@@ -1,50 +1,41 @@
-import React from "react";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
-    <div className="flex flex-col h-screen p-3 bg-gray-800 shadow w-60">
-      <div className="space-y-3">
-        <div className="flex items-center">
-          <h2 className="text-xl font-bold text-white">Admin Dashboard</h2>
-        </div>
-        <div className="flex-1">
-          <ul className="pt-2 pb-4 space-y-1 text-sm">
-            <li className="rounded-sm">
-              <a
-                href="#"
-                className="flex items-center p-2 space-x-3 rounded-md text-gray-100 hover:bg-gray-700"
-              >
-                <span>Dashboard</span>
-              </a>
-            </li>
-            <li className="rounded-sm">
-              <a
-                href="#"
-                className="flex items-center p-2 space-x-3 rounded-md text-gray-100 hover:bg-gray-700"
-              >
-                <span>Users</span>
-              </a>
-            </li>
-            <li className="rounded-sm">
-              <a
-                href="#"
-                className="flex items-center p-2 space-x-3 rounded-md text-gray-100 hover:bg-gray-700"
-              >
-                <span>Settings</span>
-              </a>
-            </li>
-            <li className="rounded-sm">
-              <a
-                href="#"
-                className="flex items-center p-2 space-x-3 rounded-md text-gray-100 hover:bg-gray-700"
-              >
-                <span>Logout</span>
-              </a>
-            </li>
-          </ul>
-        </div>
+    <aside className="w-64 h-screen bg-gray-800 text-white">
+      <div className="p-4">
+        <ul>
+          {/* Litigant Dashboard with enhanced styling */}
+          <li className="mb-6">
+            <Link
+              to="/dashboard"
+              className="block p-4 bg-blue-700 text-lg font-bold rounded hover:bg-blue-600 shadow-lg text-center"
+            >
+              Litigant Dashboard
+            </Link>
+          </li>
+          {/* Complete Profile */}
+          <li className="mb-4">
+            <Link to="/complete-profile" className="block p-2 bg-gray-700 rounded hover:bg-gray-600">
+              Complete Profile
+            </Link>
+          </li>
+          {/* Search Advocate */}
+          <li className="mb-4">
+            <Link to="/search-advocate" className="block p-2 bg-gray-700 rounded hover:bg-gray-600">
+              Search Advocate
+            </Link>
+          </li>
+          {/* Register Case */}
+          <li className="mb-4">
+            <Link to="/register-case" className="block p-2 bg-gray-700 rounded hover:bg-gray-600">
+              Register Case
+            </Link>
+          </li>
+        </ul>
       </div>
-    </div>
+    </aside>
   );
 };
 
